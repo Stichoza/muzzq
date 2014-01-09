@@ -1,0 +1,10 @@
+{
+	"name": "muzzq",
+	"version": "0.0.1",
+	"dependencies": {
+		"modernizr": "~2.7.x",
+		"jquery": "~2.0.3",
+		"font-awesome": "~4.0.3",
+		"bootstrap": "~3.0.3"
+	}
+}
