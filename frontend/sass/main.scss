@@ -1,0 +1,34 @@
+@import 'compass';
+
+body {
+	background: #fff;
+}
+
+.navbar {
+	background: rgba(255,255,255,0.8);
+}
+
+section {
+	&.divided {
+		display: block;
+		position: fixed;
+		top: 0;
+	}
+	&.divided-left {
+		left: 0;
+		width: 60%;
+		height: 100%;
+		background-color: #f88;
+	}
+	&.divided-right {
+		right: 0;
+		width: 40%;
+		background-color: #8f8;
+		height: 115.470053838%; // H/Cos(30) + W/2
+		@include transform(rotate(30deg));
+		& > .divided-inner {
+			transform: rotate(20deg);
+			@include transform(rotate(-30deg));
+		}
+	}
+}
