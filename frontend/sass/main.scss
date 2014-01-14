@@ -33,3 +33,12 @@ section {
 		}
 	}
 }
+
+#youtube-container {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	position: fixed;
+	top: -2px;
+	left: -2px;
+}
