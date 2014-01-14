@@ -29,6 +29,7 @@ section {
 		& > .divided-inner {
 			transform: rotate(20deg);
 			@include transform(rotate(-30deg));
+			
 		}
 	}
 }
