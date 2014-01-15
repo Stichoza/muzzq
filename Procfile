@@ -1,1 +1,1 @@
-web: node webdyno.js
+web: node worker.js
