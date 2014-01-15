@@ -7,6 +7,7 @@
 		"font-awesome":	"~4.0.3",
 		"bootstrap":	"~3.0.3",
 		"swfobject":	"",
-		"typeahead.js":	"~0.9.3"
+		"typeahead.js":	"~0.9.3",
+		"hogan":		"~3.0.0"
 	}
 }
