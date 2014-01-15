@@ -1,19 +1,27 @@
 var yt = new YouTube();
 yt.initYouTube("youtube-ninja");
 
-var lf = new LastFm();
-
 /*$('#artist').typeahead({
+	name: 'artists',
+	remote: LastFm.api.url
+		+ "?method=artist.search&format=json&api_key="
+		+ LastFm.api.key
+		+ "&artist=%QUERY",
+	template: [
+		'<p class="artist">
 
-    source: function (query, process) {
-        return $.getJSON(
-            'path/to/lookup',
-            { query: query },
-            function (data) {
-                return process(data);
-            });
-    }
+		{{^results}}
+			{{#artistmatches}}
+				{{artist{{name}}}}
+			{{/artistmatches}}
+		{{/results}}
 
+		</p>',
+		'<p class="repo-name"></p>',
+		'<p class="repo-description"></p>'
+	].join(''),
+	valueKey: 'name',
+	engine: Hogan
 });*/
 
 $("#listen").submit(function(e) {
