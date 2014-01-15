@@ -1,35 +1,30 @@
-
-
-function onYouTubePlayerReady(playerId) {
-	console.log("YouTube Player loaded" + (playerId ? ": " + playerId : ""));
-	yt.instance = document.getElementById("xyoutube");
-	yt.instance.addEventListener("onStateChange", "onYouTubePlayerStateChange");
-	yt.playSearched(prompt("What would you like to listen?"));
-}
-
-function onYouTubePlayerStateChange(newState) {
-   console.log("Player state changed: " + newState);
-}
-
 /**
  * TouTube API Wrapper
  * @author Stichoza <me@stichoza.com>
  */
-
 function YouTube() {
+	this.video = {
+		id: null,
+		title: null,
+		duration: 0,
+		currentTime: 0,
+		startByte: 0,
+		bytesTotal: 0,
+		bytesLoaded: 0
+	};
 	this.instance = null;
-};
+}
 
-YouTube.prototype.initYouTube = function() {
+YouTube.prototype.initYouTube = function(elementId) {
 	var youtubeJsApi = "http://www.youtube.com/apiplayer?enablejsapi=1&version=3";
-	var youtubeNinja = "youtube-ninja";
+	var youtubeNinja = elementId | "youtube";
 	var params = {
 		allowScriptAccess: "always"
 	};
-    var attribs = {
-    	id: "xyoutube"
-    };
-    swfobject.embedSWF(youtubeJsApi, youtubeNinja, "425", "356", "8", null, null, params, attribs);
+	var attribs = {
+		id: "xyoutube"
+	};
+	swfobject.embedSWF(youtubeJsApi, youtubeNinja, "425", "356", "8", null, null, params, attribs);
 	setTimeout(function () {
 		console.log($(".fc-panel"));
 		$(".fc-panel").click();
@@ -37,16 +32,27 @@ YouTube.prototype.initYouTube = function() {
 };
 
 YouTube.prototype.playSearched = function (query, index, startSeconds) {
-	var index = index | 0;
-	var sec = sec | 0;
+	var ind = index | 0;
+	var sec = startSeconds | 0;
 	this.instance.loadPlaylist({
 		list: query,
 		listType: "search",
-		index: index,
-		startSeconds: startSeconds
+		index: ind,
+		startSeconds: sec
 	});
-}
+};
 
-var yt = new YouTube();
-yt.initYouTube();
+YouTube.prototype.onStateChange = function (newState) {
+   console.log("Player state changed: " + newState);
+};
+
+/**
+ * Implement API method
+ */
+function onYouTubePlayerReady(playerId) {
+	console.log("YouTube Player loaded" + (playerId ? ": " + playerId : ""));
+	yt.instance = document.getElementById("xyoutube");
+	yt.instance.addEventListener("onStateChange", yt.onStateChange);
+	yt.playSearched(window.prompt("What would you like to listen?"));
+};
 
