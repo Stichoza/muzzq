@@ -5,7 +5,7 @@
   "main": "webdyno.js",
   "scripts": {
     "test": "echo \"no test specified\" && exit 1",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "sudo ./node_modules/bower/bin/bower install"
   },
   "dependencies": {
     "express": "3.1.x",
@@ -22,8 +22,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-compass": "~0.6.0",
-    "grunt-notify": "~0.2.17",
-    "bower": "0.6.x"
+    "grunt-notify": "~0.2.17"
   },
   "engines": {
     "node": "0.10.x",
