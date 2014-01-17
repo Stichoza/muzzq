@@ -7,25 +7,44 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bin/style.css">
 		<link rel="stylesheet" href="css/login.css">
 
-		<script src="components/modernizr/modernizr.js"></script>
+		<script src="libs/modernizr/modernizr.min.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<div>
-				<h1>muzzq</h1>
+		<div id="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<h1 class="logo-text">muzzq</h1>
+					</div>
+					<div class="col-md-4 signup-area">
+						<h2>Sign up! <small>It's free</small></h2>
+						<h5 class="signup-caption">Just enter your email and you're done ;)</h5>
+						<form role="form">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" id="email" placeholder="enter your email">
+							</div>
+							<div class="form-group">
+								<a href="#" class="btn btn-default btn-lg">Join muzzq</a>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
-			
-
-			
-
 		</div>
+
+		<div id="footer">
+			<div class="container">
+				<p class="text-muted">Made with love by <a href="http://stichoza.com/">Stichoza.com</a></p>
+			</div>
+		</div>
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="components/jquery/jquery.min.js"><\/script>')</script>
-		<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script>window.jQuery || document.write('<script src="libs/jquery/jquery.min.js"><\/script>')</script>
+		<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 		<script src="js/dist/login.min.js"></script>
 	</body>
 </html>
