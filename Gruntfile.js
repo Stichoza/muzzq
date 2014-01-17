@@ -39,24 +39,31 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			options: {
-
 			},
-			dist: {
+			js: {
 				src: [
 					"frontend/js/youtube.js",
 					"frontend/js/lastfm.js",
 					"frontend/js/main.js"
 				],
-				dest: "frontend/js/dist/ytlfm.con.js"
+				dest: "frontend/js/bin/ytlfm.con.js"
+			},
+			css: {
+				src: [
+					"frontend/css/bootstrap-theme.css",
+					"frontend/css/youtube.css",
+					"frontend/css/main.css"
+				],
+				dest: "frontend/css/bin/style.css"
 			}
 		},
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
 			},
-			dist: {
+			js: {
 				files: {
-				'frontend/js/dist/ytlfm.min.js': ['<%= concat.dist.dest %>']
+				'frontend/js/bin/ytlfm.min.js': ['<%= concat.js.dest %>']
 				}
 			}
 		},
@@ -88,11 +95,11 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['frontend/sass/*.{sass,scss}','frontend/sass/*/*.{sass,scss}'],
-				tasks: ['compass'] //, 'notify:sass'
+				tasks: ['compass', 'concat:css'] //, 'notify:sass'
 			},
 			jsmin: {
 				files: ['frontend/js/*.js'],
-				tasks: ['concat', 'uglify'] //, 'notify:jsmin'
+				tasks: ['concat', 'uglify:js'] //, 'notify:jsmin'
 			},
 			assets: {
 				files: [

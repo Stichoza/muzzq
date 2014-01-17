@@ -1,7 +1,16 @@
 @import 'compass';
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300&subset=latin,cyrillic,latin-ext,cyrillic-ext);
+
+$colorNormal:  #00c322;
+$colorLight:   #38E156;
+$colorLighter: #65E17B;
+$colordark:    #259238;
+$colordarker:  #007F16;
+
 body {
 	background: #fff;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .navbar {

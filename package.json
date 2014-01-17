@@ -5,7 +5,7 @@
   "main": "webdyno.js",
   "scripts": {
     "test": "echo \"no test specified\" && exit 1",
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "dependencies": {
     "express": "3.1.x",

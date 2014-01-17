@@ -1,28 +1,33 @@
 var yt = new YouTube();
 yt.initYouTube("youtube-ninja");
 
-/*$('#artist').typeahead({
+$('#artist').typeahead({
 	name: 'artists',
-	remote: LastFm.api.url
-		+ "?method=artist.search&format=json&api_key="
-		+ LastFm.api.key
-		+ "&artist=%QUERY",
+	remote: {
+		url: LastFm.api.url
+			+ "?method=artist.search&format=json&api_key="
+			+ LastFm.api.key
+			+ "&artist=%QUERY",
+		filter: function(response) {
+			var result = [];
+			$.each(response.results.artistmatches.artist, function(i, val) {
+				result.push({
+					name: val["name"],
+					listeners: val["listeners"],
+					image: val["image"][3]["#text"]
+				});
+			});
+			return result;
+		}
+	},
 	template: [
-		'<p class="artist">
-
-		{{^results}}
-			{{#artistmatches}}
-				{{artist{{name}}}}
-			{{/artistmatches}}
-		{{/results}}
-
-		</p>',
-		'<p class="repo-name"></p>',
-		'<p class="repo-description"></p>'
+		'<div class="tt-artist-img" ',
+		'style="background-image:url({{image}})"></div>',
+		'<div class="tt-artist-name">{{name}}</div>'
 	].join(''),
 	valueKey: 'name',
 	engine: Hogan
-});*/
+});
 
 $("#listen").submit(function(e) {
 	e.preventDefault();
