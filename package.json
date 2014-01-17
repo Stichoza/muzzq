@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "express": "3.1.x",
-    "socket.io": "0.9.x",
-    "bower": "0.6.x"
+    "socket.io": "0.9.x"
   },
   "devDependencies": {
     "connect": "~2.11.0",
