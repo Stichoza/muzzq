@@ -1,4 +1,50 @@
+@import '_default.scss';
+
+.white-bg {
+	background-color: rgba(255,255,255,0.4);
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
 	background-image: url(http://www.exelans.org/thumb/headphones-and-grass.jpg);
-	background-size: cover;
+	background-attachment: fixed;
+	@include background-size(cover);
+}
+
+.logo-text {
+ 	font-family: 'Josefin Slab';
+	font-size: 6em;
+	font-weight: 600;
+	margin-top: 0;
+	color: white;
+	color: rgba(255, 255, 255, 0.95);
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto 0px-$footerHeight;
+	padding: 0 0 $footerHeight;
+}
+
+#footer {
+	height: $footerHeight;
+	@extend .white-bg;
+}
+
+.signup-area {
+	@extend .white-bg;
+	padding-top: 64px;
+	h2 {
+		small {
+			color: #444;
+		}
+	}
+}
+
+.signup-caption {
+	margin-bottom: 16px;
 }
