@@ -20,15 +20,16 @@
 					<div class="col-md-8">
 						<h1 class="logo-text">muzzq</h1>
 					</div>
-					<div class="col-md-4 signup-area">
-						<h2>Sign up! <small>It's free</small></h2>
+					<div class="col-md-4 signup-area white-bg">
+						<h2>Join muzzq! <small>It's free</small></h2>
 						<h5 class="signup-caption">Just enter your email and you're done ;)</h5>
-						<form role="form">
+						<form role="form" action="inside.html">
 							<div class="form-group">
 								<input type="email" name="email" class="form-control" id="email" placeholder="enter your email">
 							</div>
 							<div class="form-group">
-								<a href="#" class="btn btn-default btn-lg">Join muzzq</a>
+								<button type="submit" class="btn btn-default btn-lg">Sign up</button>
+								<a id="login-btn" href="#" class="btn btn-outline btn-lg pull-right">or Login</a>
 							</div>
 						</form>
 					</div>
@@ -36,15 +37,17 @@
 			</div>
 		</div>
 
-		<div id="footer">
+		<div id="footer" class="black-bg">
 			<div class="container">
-				<p class="text-muted">Made with love by <a href="http://stichoza.com/">Stichoza.com</a></p>
+				<p class="force-white">Made with love by <a href="http://stichoza.com/">Stichoza.com</a></p>
 			</div>
 		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="libs/jquery/jquery.min.js"><\/script>')</script>
 		<script src="libs/bootstrap/js/bootstrap.min.js"></script>
-		<script src="js/dist/login.min.js"></script>
+		<script src="libs/blur/blur.min.js"></script>
+		<script src="js/bin/default.min.js"></script>
+		<script src="js/bin/login.min.js"></script>
 	</body>
 </html>

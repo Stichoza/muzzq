@@ -1,0 +1,11 @@
+.btn-outline {
+	color: #fff;
+	background-color: rgba(0,0,0,0.2);
+	border-color: #fff;
+	&:hover {
+		color: #444;
+		text-shadow: none;
+		background-color: #fff;
+		border-color: #ccc;
+	}
+}

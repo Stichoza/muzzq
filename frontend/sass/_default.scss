@@ -10,5 +10,17 @@ $colordarker:  #007F16;
 /* Sizes */
 $footerHeight: 36px;
 
+@import 'bootstrap-theme.scss';
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300&subset=latin,cyrillic,latin-ext,cyrillic-ext);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700,400italic);
+
+.white-bg {
+	background-color: rgba(255,255,255,0.4);
+}
+.black-bg {
+	background-color: rgba(0,0,0,0.4);
+}
+.force-white, .force-white * {
+	color: #fff !important;
+}

@@ -63,7 +63,9 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: {
-				'frontend/js/bin/ytlfm.min.js': ['<%= concat.js.dest %>']
+					'frontend/js/bin/ytlfm.min.js': ['<%= concat.js.dest %>'],
+					'frontend/js/bin/login.min.js': 'frontend/js/login.js',
+					'frontend/js/bin/default.min.js': 'frontend/js/default.js'
 				}
 			}
 		},
