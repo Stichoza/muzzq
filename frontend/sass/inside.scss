@@ -1,0 +1,16 @@
+@import '_default.scss';
+
+body {
+	background-image: url(/images/headphones-and-grass.jpg);
+	background-attachment: fixed;
+	@include background-size(cover);
+}
+
+.jumbotron {
+	background-color: rgba(255,255,255,0.5);
+}
+
+#listen button {
+	height: 45px;
+	font-size: 16px;
+}

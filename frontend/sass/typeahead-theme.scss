@@ -1,0 +1,78 @@
+@import '_default.scss';
+
+.tt-hint,
+.tt-query {
+	width: 250px;
+	height: 45px;
+	font-size: 18px;
+	padding: 8px 16px;
+	margin: 0;
+	border-width: 1px;
+	@extend .animated;
+}
+.tt-hint {
+	color: #ccc;
+	border-top: none;
+}
+
+.tt-suggestions {
+	@include box-shadow(0px 2px 6px rgba(0,0,0,0.5));
+}
+
+.tt-suggestion {
+	width: 250px;
+	padding: 0px;
+	font-size: 14px;
+	clear: both;
+	height: 46px;
+	overflow: hidden;
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.7);
+	border-bottom: 1px solid rgba(240,240,240,0.5);
+}
+
+.tt-suggestion.tt-is-under-cursor {
+	color: #fff;
+	background-color: #0097cf;
+}
+
+.tt-artist-img, .tt-track-img {
+	height: 42px;
+	width: 42px;
+	margin: 2px 6px 2px 2px;
+	@include background-size(cover);
+}
+
+.tt-track-name {
+	white-space: nowrap !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 78%;
+	float: left;
+	clear: none;
+}
+.tt-track-by-name {
+	clear: both;
+	font-size: 9px;
+	font-weight: 200;
+	top: -13px;
+	position: relative;
+	b {
+		font-size: 10px;
+		font-weight: 400;
+	}
+}
+
+.tt-selected {
+	color: #fff;
+	background-position: 0% 30%;
+	background-size: cover;
+	@include opacity(0.9);
+	@include text-shadow(
+		0px 0px 6px #555,
+		0px 0px 4px #555,
+		0px 0px 3px #555,
+		0px 0px 2px #555,
+		0px 0px 2px #555,
+		0px 0px 2px #555);
+}

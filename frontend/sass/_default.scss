@@ -10,10 +10,14 @@ $colordarker:  #007F16;
 /* Sizes */
 $footerHeight: 36px;
 
-@import 'bootstrap-theme.scss';
+/* Fonts */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300&subset=latin,cyrillic,latin-ext,cyrillic-ext");
+@import url("http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700,400italic");
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300&subset=latin,cyrillic,latin-ext,cyrillic-ext);
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700,400italic);
+$sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "Josefin Slab", Georgia, "Times New Roman", Times, serif;
+.sans-serif { font-family: $sans-serif; }
+.serif { font-family: $serif; }
 
 .white-bg {
 	background-color: rgba(255,255,255,0.4);
@@ -23,4 +27,42 @@ $footerHeight: 36px;
 }
 .force-white, .force-white * {
 	color: #fff !important;
+}
+.animated {
+	@include transition(0.2s all ease-out);
+}
+
+
+/**
+ *
+ * Bootstrap Theme
+ *
+ */
+
+ .btn-outline {
+	color: #fff;
+	background-color: rgba(0,0,0,0.2);
+	border-color: #fff;
+	&:hover {
+		color: #444;
+		text-shadow: none;
+		background-color: #fff;
+		border-color: #ccc;
+	}
+}
+
+.progress-group .progress {
+	float: left;
+}
+
+.navbar-brand {
+	@extend .serif;
+	font-size: 32px;
+	font-weight: 700;
+	position: relative;
+	top: -4px;
+	color: #ddd;
+	@include text-shadow(
+		0px 0px 4px rgba(255,255,255,0.6),
+		0px 0px 9px rgba(255,255,255,0.4));
 }

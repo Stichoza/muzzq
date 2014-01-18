@@ -8,9 +8,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bin/style.css">
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/typeahead-theme.css">
+		<link rel="stylesheet" href="css/bin/player.css">
 
-		<script src="components/modernizr/modernizr.min.js"></script>
+		<script src="libs/modernizr/modernizr.min.js"></script>
 	</head>
 	<body>
 
@@ -40,6 +42,7 @@
 				<h1>muzzq <small>your friends. your music</small></h1>
 				<br>
 				<h3>What do you want to listen?</h3>
+
 				<form id="listen" class="form-inline" role="form">
 					<div class="form-group">
 						<label class="sr-only" for="artist">Artist</label>
@@ -49,8 +52,18 @@
 						<label class="sr-only" for="track">Song title</label>
 						<input type="text" class="form-control" id="track" placeholder="Song title">
 					</div>
-					<button type="submit" data-loading-text="Loading..." class="btn btn-default">Listen</button>
+					<div class="form-group">
+						<button type="submit" data-loading-text="Loading..." class="btn btn-default"><i class="fa fa-play"></i> Listen</button>
+					</div>
 				</form>
+				<div class="progress-group">
+					<div class="progress progress-striped active">
+						<div class="progress-bar progress-bar-success" style="width: 50%"></div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" style="width: 35%"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -61,12 +74,13 @@
 			
 
 		</div>
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="libs/jquery/jquery.min.js"><\/script>')</script>
 		<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 		<script src="libs/typeahead.js/typeahead.min.js"></script>
 		<script src="libs/hogan/web/builds/2.0.0/hogan-2.0.0.min.mustache.js"></script>
 		<script src="libs/swfobject/swfobject.js"></script>
-		<script src="js/dist/ytlfm.min.js"></script>
+		<script src="js/bin/ytlfm.min.js"></script>
 	</body>
 </html>

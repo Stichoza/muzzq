@@ -5,13 +5,13 @@ html, body {
 }
 
 body {
-	background-image: url(../images/headphones-and-grass.jpg);
+	background-image: url(/images/headphones-and-grass.jpg);
 	background-attachment: fixed;
 	@include background-size(cover);
 }
 
 .logo-text {
- 	font-family: 'Josefin Slab';
+	@extend .serif;
 	font-size: 8em;
 	font-weight: 600;
 	margin-top: 0;

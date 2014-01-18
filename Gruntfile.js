@@ -44,17 +44,17 @@ module.exports = function(grunt) {
 				src: [
 					"frontend/js/youtube.js",
 					"frontend/js/lastfm.js",
-					"frontend/js/main.js"
+					"frontend/js/inside.js"
 				],
 				dest: "frontend/js/bin/ytlfm.con.js"
 			},
 			css: {
 				src: [
-					"frontend/css/bootstrap-theme.css",
+					"frontend/css/main.css",
 					"frontend/css/youtube.css",
-					"frontend/css/main.css"
+					"frontend/css/inside.css"
 				],
-				dest: "frontend/css/bin/style.css"
+				dest: "frontend/css/bin/player.css"
 			}
 		},
 		uglify: {
